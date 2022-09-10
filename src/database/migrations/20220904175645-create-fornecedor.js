@@ -32,7 +32,7 @@ module.exports = {
         allowNull: true
       },
       data_abertura: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false
       },
       contato: {

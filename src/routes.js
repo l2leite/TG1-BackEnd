@@ -10,6 +10,8 @@ const FuncionarioController = require('./controllers/FuncionarioController');
 const EstoqueController = require('./controllers/EstoqueController');
 const OrdemVendaController = require('./controllers/OrdemVendaController');
 const VendaController = require('./controllers/VendaController');
+const Fornecedor = require('./controllers/FornecedorController');
+const FornecedorController = require('./controllers/FornecedorController');
 
 const routes = express.Router();
 
@@ -63,5 +65,13 @@ routes.delete('/venda/delete', VendaController.delete);
 routes.get('/venda/index', VendaController.index);
 routes.get('/venda/index_id', VendaController.index_id);
 routes.get('/venda/index_par_id', VendaController.index_par_id);
+
+routes.post('/fornecedor/store', FornecedorController.store);
+routes.get('/fornecedor/index', FornecedorController.index);
+routes.get('/fornecedor/index_id', FornecedorController.index_id);
+routes.get('/fornecedor/index_par_cnpj', FornecedorController.index_par_cnpj);
+routes.patch('/fornecedor/update_cnpj', FornecedorController.update_cnpj);
+routes.patch('/fornecedor/update_id', FornecedorController.update_id);
+routes.delete('/fornecedor/delete', FornecedorController.delete);
 
 module.exports = routes;
